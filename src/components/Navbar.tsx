@@ -11,21 +11,21 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg neon-border-blue flex items-center justify-center animate-pulse-glow">
-              <span className="text-xl font-bold font-orbitron gradient-text">C</span>
+            <div className="w-10 h-10 rounded-lg bg-primary/20 border border-primary flex items-center justify-center">
+              <span className="text-xl font-bold font-orbitron text-primary">C</span>
             </div>
             <span className="text-xl font-orbitron font-bold gradient-text">CipherStakes</span>
           </div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm font-medium text-muted-foreground hover:neon-text-blue transition-colors">
+            <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               About
             </a>
-            <a href="#how" className="text-sm font-medium text-muted-foreground hover:neon-text-blue transition-colors">
+            <a href="#how" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               How It Works
             </a>
-            <a href="#hackathon" className="text-sm font-medium text-muted-foreground hover:neon-text-blue transition-colors">
+            <a href="#hackathon" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Hackathon
             </a>
           </div>
@@ -52,13 +52,13 @@ const Navbar = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-3 border-t border-border/20 animate-slide-in-up">
-            <a href="#about" className="block text-sm font-medium text-muted-foreground hover:neon-text-blue transition-colors py-2">
+            <a href="#about" className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2">
               About
             </a>
-            <a href="#how" className="block text-sm font-medium text-muted-foreground hover:neon-text-blue transition-colors py-2">
+            <a href="#how" className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2">
               How It Works
             </a>
-            <a href="#hackathon" className="block text-sm font-medium text-muted-foreground hover:neon-text-blue transition-colors py-2">
+            <a href="#hackathon" className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2">
               Hackathon
             </a>
             <Button variant="neonOutline" size="sm" className="w-full">

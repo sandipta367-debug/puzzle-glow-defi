@@ -44,17 +44,17 @@ const AboutSection = () => {
               
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  CipherStakes pools your <span className="neon-text-blue font-semibold">$1 stablecoin deposits</span> into high-yield vaults on Solana. 
+                  CipherStakes pools your <span className="text-primary font-semibold">$1 stablecoin deposits</span> into high-yield vaults on Solana. 
                   Earn 5–12% APY via blue-chip DeFi protocols like Aave, Maker, and Ondo.
                 </p>
                 
                 <p>
-                  Yields fund puzzle-secured wallets – solve riddles, images, and challenges to claim tiered prizes up to <span className="neon-text-pink font-bold">$5,000+</span>. 
+                  Yields fund puzzle-secured wallets – solve riddles, images, and challenges to claim tiered prizes up to <span className="text-accent font-bold">$5,000+</span>. 
                   Form guilds for collaborative wins and forge real bonds.
                 </p>
                 
                 <p>
-                  Vault 10? That's our community treasury for DAO-voted impact. <span className="neon-text-purple font-semibold">Principal always safe</span> – withdraw anytime.
+                  Vault 10? That's our community treasury for DAO-voted impact. <span className="text-secondary font-semibold">Principal always safe</span> – withdraw anytime.
                 </p>
               </div>
 
@@ -63,10 +63,10 @@ const AboutSection = () => {
                 {features.map((feature, index) => (
                   <div 
                     key={feature.title}
-                    className="glass-panel p-4 rounded-lg hover:neon-border-blue transition-all duration-300 group"
+                    className="glass-panel p-4 rounded-lg border border-transparent hover:border-primary transition-all duration-300 group"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <feature.icon className={`h-8 w-8 ${feature.color} mb-2 group-hover:animate-pulse-glow`} />
+                    <feature.icon className={`h-8 w-8 ${feature.color} mb-2`} />
                     <h3 className="font-orbitron font-bold text-foreground mb-1">{feature.title}</h3>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>
@@ -80,8 +80,8 @@ const AboutSection = () => {
 
             {/* Right: Infographic */}
             <div className="relative animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="glass-panel p-8 rounded-2xl space-y-6">
-                <h3 className="text-2xl font-orbitron font-bold neon-text-blue text-center mb-8">The Flow</h3>
+              <div className="glass-panel p-8 rounded-2xl space-y-6 border border-border">
+                <h3 className="text-2xl font-orbitron font-bold text-primary text-center mb-8">The Flow</h3>
                 
                 <div className="space-y-6">
                   {[
@@ -91,7 +91,7 @@ const AboutSection = () => {
                     { step: "04", title: "Claim Rewards", desc: "Withdraw principal + prizes anytime" }
                   ].map((item, index) => (
                     <div key={item.step} className="flex items-start gap-4 group">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-full neon-border-blue flex items-center justify-center font-orbitron font-bold neon-text-blue group-hover:animate-pulse-glow">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary bg-primary/10 flex items-center justify-center font-orbitron font-bold text-primary">
                         {item.step}
                       </div>
                       <div className="flex-1 pt-2">
