@@ -47,16 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        'neon-blue': "hsl(var(--neon-blue))",
+        'neon-purple': "hsl(var(--neon-purple))",
+        'neon-pink': "hsl(var(--neon-pink))",
+        'cyber-dark': "hsl(var(--cyber-dark))",
+        'cyber-darker': "hsl(var(--cyber-darker))",
+      },
+      fontFamily: {
+        'orbitron': ['Orbitron', 'sans-serif'],
+        'rajdhani': ['Rajdhani', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +79,42 @@ export default {
             height: "0",
           },
         },
+        flicker: {
+          '0%, 100%': { opacity: '1' },
+          '41%, 43%': { opacity: '0.8' },
+          '45%, 47%': { opacity: '0.9' },
+          '50%': { opacity: '1' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { 
+            filter: 'drop-shadow(0 0 8px hsl(184 100% 50% / 0.6))',
+          },
+          '50%': { 
+            filter: 'drop-shadow(0 0 20px hsl(184 100% 50% / 0.9))',
+          },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'slide-in-up': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(30px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        flicker: "flicker 3s infinite",
+        'pulse-glow': "pulse-glow 2s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
+        'slide-in-up': "slide-in-up 0.6s ease-out forwards",
       },
     },
   },
