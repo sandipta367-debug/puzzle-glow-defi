@@ -30,8 +30,8 @@ All colors MUST be HSL.
     --muted: 240 10% 15%;
     --muted-foreground: 180 20% 65%;
 
-    /* Hot Pink accent */
-    --accent: 328 100% 50%;
+    /* Turquoise accent */
+    --accent: 180 100% 60%;
     --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84% 60%;
@@ -46,17 +46,17 @@ All colors MUST be HSL.
     /* Custom cyberpunk tokens */
     --neon-blue: 184 100% 50%;
     --neon-purple: 290 92% 54%;
-    --neon-pink: 328 100% 50%;
+    --neon-cyan: 180 100% 60%;
     --cyber-dark: 0 0% 4%;
     --cyber-darker: 0 0% 2%;
     
     /* Glow effects */
     --glow-blue: 0 0 20px hsl(184 100% 50% / 0.6), 0 0 40px hsl(184 100% 50% / 0.4);
     --glow-purple: 0 0 20px hsl(290 92% 54% / 0.6), 0 0 40px hsl(290 92% 54% / 0.4);
-    --glow-pink: 0 0 20px hsl(328 100% 50% / 0.6), 0 0 40px hsl(328 100% 50% / 0.4);
+    --glow-cyan: 0 0 20px hsl(180 100% 60% / 0.6), 0 0 40px hsl(180 100% 60% / 0.4);
     
     /* Gradient tokens */
-    --gradient-cyber: linear-gradient(135deg, hsl(184 100% 50%), hsl(290 92% 54%), hsl(328 100% 50%));
+    --gradient-cyber: linear-gradient(135deg, hsl(184 100% 50%), hsl(290 92% 54%), hsl(180 100% 60%));
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%), hsl(240 10% 8%));
   }
 }
@@ -89,9 +89,9 @@ All colors MUST be HSL.
     text-shadow: var(--glow-purple);
   }
 
-  .neon-text-pink {
-    color: hsl(var(--neon-pink));
-    text-shadow: var(--glow-pink);
+  .neon-text-cyan {
+    color: hsl(var(--neon-cyan));
+    text-shadow: var(--glow-cyan);
   }
 
   .gradient-text {
@@ -117,9 +117,9 @@ All colors MUST be HSL.
     box-shadow: var(--glow-purple), inset var(--glow-purple);
   }
 
-  .neon-border-pink {
-    border: 2px solid hsl(var(--neon-pink));
-    box-shadow: var(--glow-pink), inset var(--glow-pink);
+  .neon-border-cyan {
+    border: 2px solid hsl(var(--neon-cyan));
+    box-shadow: var(--glow-cyan), inset var(--glow-cyan);
   }
 
   /* Animations */

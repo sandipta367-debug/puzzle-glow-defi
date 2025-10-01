@@ -7,7 +7,7 @@ const UrgencySection = () => {
       icon: Zap,
       title: "Scarcity",
       description: "Vaults cap at $100k – spots vanish quick",
-      color: "neon-text-pink"
+      color: "neon-text-cyan"
     },
     {
       icon: TrendingUp,
@@ -39,8 +39,8 @@ const UrgencySection = () => {
           {/* Headline */}
           <div className="space-y-4 animate-slide-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full mb-4">
-              <Clock className="h-5 w-5 neon-text-pink animate-pulse-glow" />
-              <span className="text-sm font-semibold neon-text-pink uppercase tracking-wider">Limited Time</span>
+              <Clock className="h-5 w-5 neon-text-cyan animate-pulse-glow" />
+              <span className="text-sm font-semibold neon-text-cyan uppercase tracking-wider">Limited Time</span>
             </div>
             
             <h2 className="text-4xl md:text-6xl font-orbitron font-bold gradient-text">
@@ -52,7 +52,7 @@ const UrgencySection = () => {
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto animate-slide-in-up" style={{ animationDelay: '0.1s' }}>
             <p>
               Stablecoins are exploding – <span className="neon-text-blue font-bold">trillions idle</span>, billions in dust. 
-              CipherStakes captures this with micro-entry vaults filling <span className="neon-text-pink font-bold">fast</span>.
+              CipherStakes captures this with micro-entry vaults filling <span className="neon-text-cyan font-bold">fast</span>.
             </p>
             
             <p>
@@ -66,7 +66,7 @@ const UrgencySection = () => {
             {reasons.map((reason, index) => (
               <div 
                 key={reason.title}
-                className="glass-panel p-6 rounded-xl hover:neon-border-pink transition-all duration-300 group animate-slide-in-up"
+                className="glass-panel p-6 rounded-xl hover:neon-border-cyan transition-all duration-300 group animate-slide-in-up"
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
                 <reason.icon className={`h-12 w-12 ${reason.color} mx-auto mb-4 group-hover:animate-pulse-glow`} />
@@ -78,7 +78,7 @@ const UrgencySection = () => {
 
           {/* CTA */}
           <div className="pt-8 animate-slide-in-up" style={{ animationDelay: '0.5s' }}>
-            <Button variant="neonPink" size="xl" className="group">
+            <Button variant="neonCyan" size="xl" className="group">
               <Zap className="mr-2 h-5 w-5 group-hover:animate-pulse" />
               Claim Your Spot Before It's Gone
             </Button>

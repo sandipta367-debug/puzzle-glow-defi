@@ -63,7 +63,7 @@ const FooterCTA = () => {
                       className="pl-10 bg-background/50 border-border/50 focus:border-primary"
                     />
                   </div>
-                  <Button variant="neonPurple" className="group">
+                  <Button variant="neonCyan" className="group">
                     <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     Subscribe
                   </Button>

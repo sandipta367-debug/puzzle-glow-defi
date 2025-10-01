@@ -22,7 +22,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-16 h-16 border-2 border-neon-blue opacity-20 animate-float" />
         <div className="absolute top-40 right-20 w-12 h-12 border-2 border-neon-purple opacity-20 animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-20 w-14 h-14 border-2 border-neon-pink opacity-20 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-32 left-20 w-14 h-14 border-2 border-neon-cyan opacity-20 animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
       {/* Content */}
@@ -42,7 +42,7 @@ const HeroSection = () => {
           {/* Subtext */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             CipherStakes: Turn idle stablecoins into no-loss prizes through gamified vaults, puzzles, and guilds. 
-            Deposit micro, win macro. <span className="neon-text-pink font-semibold">Limited spots – join before they're gone.</span>
+            Deposit micro, win macro. <span className="neon-text-cyan font-semibold">Limited spots – join before they're gone.</span>
           </p>
 
           {/* CTAs */}

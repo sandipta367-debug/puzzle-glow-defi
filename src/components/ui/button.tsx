@@ -18,7 +18,7 @@ const buttonVariants = cva(
         neon: "bg-primary neon-border-blue text-primary-foreground font-bold uppercase tracking-wider hover:shadow-[0_0_30px_hsl(var(--neon-blue)/0.8)] hover:scale-105",
         neonOutline: "border-2 border-primary bg-transparent text-primary font-bold uppercase tracking-wider hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--neon-blue)/0.8)] hover:scale-105",
         neonPurple: "bg-secondary neon-border-purple text-secondary-foreground font-bold uppercase tracking-wider hover:shadow-[0_0_30px_hsl(var(--neon-purple)/0.8)] hover:scale-105",
-        neonPink: "bg-accent neon-border-pink text-accent-foreground font-bold uppercase tracking-wider hover:shadow-[0_0_30px_hsl(var(--neon-pink)/0.8)] hover:scale-105",
+        neonCyan: "bg-accent neon-border-cyan text-accent-foreground font-bold uppercase tracking-wider hover:shadow-[0_0_30px_hsl(var(--neon-cyan)/0.8)] hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",
