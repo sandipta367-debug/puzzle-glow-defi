@@ -47,8 +47,8 @@ const FooterCTA = () => {
             </div>
 
             {/* Waitlist form */}
-            <div className="glass-panel p-6 rounded-xl max-w-2xl mx-auto border border-border">
-              <h3 className="font-orbitron font-bold text-xl mb-6 text-secondary">Join the Waitlist</h3>
+            <div className="glass-panel p-6 rounded-xl max-w-2xl mx-auto">
+              <h3 className="font-orbitron font-bold text-xl mb-6 neon-text-purple">Join the Waitlist</h3>
               
               <div className="space-y-4">
                 {/* Email input */}
@@ -73,13 +73,13 @@ const FooterCTA = () => {
                 <div className="pt-4 border-t border-border/30">
                   <p className="text-sm text-muted-foreground mb-3">Connect with us:</p>
                   <div className="flex justify-center gap-3">
-                    <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                    <Button variant="ghost" size="icon" className="hover:neon-border-blue">
                       <Twitter className="h-5 w-5" />
                     </Button>
-                    <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                    <Button variant="ghost" size="icon" className="hover:neon-border-blue">
                       <Send className="h-5 w-5" />
                     </Button>
-                    <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                    <Button variant="ghost" size="icon" className="hover:neon-border-blue">
                       <MessageCircle className="h-5 w-5" />
                     </Button>
                   </div>
@@ -91,7 +91,7 @@ const FooterCTA = () => {
           {/* Security badge */}
           <div className="pt-8 animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-              <Lock className="h-4 w-4 text-primary" />
+              <Lock className="h-4 w-4 neon-text-blue" />
               <span>Secure. Audited. Solana-Powered.</span>
             </p>
           </div>
