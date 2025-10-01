@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Wallet, Menu } from "lucide-react";
 import { useState } from "react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const navHeight = useTransform(scrollY, [0, 100], [80, 64]);
+  const navPadding = useTransform(scrollY, [0, 100], [16, 8]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/20">
+    <motion.nav 
+      style={{ height: navHeight, paddingTop: navPadding, paddingBottom: navPadding }}
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/20 transition-all duration-300"
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -30,12 +38,16 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Wallet connect (placeholder) */}
+          {/* Wallet connect with Hover Border Gradient */}
           <div className="flex items-center gap-3">
-            <Button variant="neonOutline" size="sm" className="hidden sm:flex">
-              <Wallet className="mr-2 h-4 w-4" />
+            <HoverBorderGradient
+              as="button"
+              containerClassName="hidden sm:block"
+              className="px-4 py-2 flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              <Wallet className="h-4 w-4" />
               Connect Wallet
-            </Button>
+            </HoverBorderGradient>
             
             {/* Mobile menu toggle */}
             <Button 
@@ -68,7 +80,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

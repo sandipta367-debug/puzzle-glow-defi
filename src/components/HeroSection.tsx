@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, Lock, TrendingUp } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 const HeroSection = () => {
   return (
@@ -28,10 +29,10 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
-          {/* Main Headline with Flicker Effect */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-bold leading-tight animate-flicker">
+          {/* Main Headline with Typewriter Effect */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-bold leading-tight">
             <span className="gradient-text">
-              Unlock Yields with Just $10
+              <TypewriterEffect words="Unlock Yields with Just $10" />
             </span>
           </h1>
 
