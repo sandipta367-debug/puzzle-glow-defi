@@ -34,13 +34,13 @@ const HackathonSection = () => {
             {/* Colosseum Badge */}
             <div className="inline-flex items-center justify-center animate-slide-in-up">
               <div className="relative">
-                <div className="w-32 h-32 rounded-full glass-panel neon-border-purple flex items-center justify-center animate-pulse-glow">
+                <div className="w-32 h-32 rounded-full glass-panel border-2 border-secondary flex items-center justify-center">
                   <div className="text-center">
-                    <Trophy className="h-12 w-12 neon-text-purple mx-auto mb-2" />
-                    <div className="text-xs font-orbitron font-bold neon-text-purple">COLOSSEUM</div>
+                    <Trophy className="h-12 w-12 text-secondary mx-auto mb-2" />
+                    <div className="text-xs font-orbitron font-bold text-secondary">COLOSSEUM</div>
                   </div>
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent neon-border-pink flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent border border-accent flex items-center justify-center">
                   <span className="text-xs font-bold">S</span>
                 </div>
               </div>
@@ -50,25 +50,25 @@ const HackathonSection = () => {
               <h2 className="text-4xl md:text-5xl font-orbitron font-bold gradient-text">
                 Built in the Arena
               </h2>
-              <p className="text-xl neon-text-purple font-semibold">
+              <p className="text-xl text-secondary font-semibold">
                 Colosseum Hackathon Project
               </p>
             </div>
           </div>
 
           {/* Main content */}
-          <div className="glass-panel p-8 md:p-12 rounded-2xl space-y-8 animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="glass-panel p-8 md:p-12 rounded-2xl space-y-8 border border-border animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                CipherStakes is a standout project from the <span className="neon-text-blue font-bold">Solana Cypherpunk Hackathon</span> by 
+                CipherStakes is a standout project from the <span className="text-primary font-bold">Solana Cypherpunk Hackathon</span> by 
                 Colosseum – crypto's premier competition.
               </p>
               
               <p>
                 Powered by Colosseum's platform, we're accelerating Solana's ecosystem with innovative DeFi gamification. 
-                This prestige means <span className="neon-text-purple font-bold">vetted tech</span>, 
-                <span className="neon-text-pink font-bold"> rapid iteration</span>, and 
-                <span className="neon-text-blue font-bold"> massive potential</span> – join a hackathon-born winner before launch.
+                This prestige means <span className="text-secondary font-bold">vetted tech</span>, 
+                <span className="text-accent font-bold"> rapid iteration</span>, and 
+                <span className="text-primary font-bold"> massive potential</span> – join a hackathon-born winner before launch.
               </p>
             </div>
 
@@ -79,7 +79,7 @@ const HackathonSection = () => {
                   key={cred.title}
                   className="bg-card/30 backdrop-blur-sm p-6 rounded-lg border border-border/50 hover:border-primary transition-all duration-300 group"
                 >
-                  <cred.icon className={`h-10 w-10 ${cred.color} mb-3 group-hover:animate-pulse-glow`} />
+                  <cred.icon className={`h-10 w-10 ${cred.color} mb-3`} />
                   <h3 className="font-orbitron font-bold text-foreground mb-2">{cred.title}</h3>
                   <p className="text-sm text-muted-foreground">{cred.description}</p>
                 </div>

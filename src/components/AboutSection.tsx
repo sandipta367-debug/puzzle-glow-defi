@@ -1,7 +1,5 @@
-import { Shield, Puzzle, Users, TrendingUp, Coins } from "lucide-react";
+import { Shield, Puzzle, Users, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { TextReveal } from "@/components/ui/text-reveal";
-import { Timeline } from "@/components/ui/timeline";
 
 const AboutSection = () => {
   const features = [
@@ -31,93 +29,83 @@ const AboutSection = () => {
     }
   ];
 
-  const timelineData = [
-    {
-      title: "Deposit",
-      content: (
-        <div className="glass-panel p-6 rounded-lg">
-          <Coins className="h-8 w-8 text-primary mb-4" />
-          <p className="text-muted-foreground">
-            Start with just $10 in USDC. Your stablecoins are pooled into secure, high-yield vaults on Solana.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Yield Staking",
-      content: (
-        <div className="glass-panel p-6 rounded-lg">
-          <TrendingUp className="h-8 w-8 text-secondary mb-4" />
-          <p className="text-muted-foreground">
-            Earn 5-12% APY automatically through battle-tested DeFi protocols like Aave, Maker, and Ondo on Solana.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Puzzle Wallets",
-      content: (
-        <div className="glass-panel p-6 rounded-lg">
-          <Shield className="h-8 w-8 text-accent mb-4" />
-          <p className="text-muted-foreground">
-            Generated yields fund puzzle-secured wallets with tiered prizes up to $5,000+. Solve to claim your rewards.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Claim Rewards",
-      content: (
-        <div className="glass-panel p-6 rounded-lg">
-          <Users className="h-8 w-8 text-primary mb-4" />
-          <p className="text-muted-foreground">
-            Solve creative challenges solo or form guilds. Win through skill, not luck. Principal always safe – withdraw anytime.
-          </p>
-        </div>
-      ),
-    },
-  ];
-
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark to-cyber-darker" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-7xl mx-auto space-y-20">
-          {/* What is CipherStakes */}
-          <div className="space-y-8 animate-slide-in-up">
-            <h2 className="text-4xl md:text-5xl font-orbitron font-bold gradient-text text-center">
-              What is CipherStakes?
-            </h2>
-            
-            {/* Text Reveal Effect */}
-            <TextReveal 
-              text="CipherStakes pools your $1 stablecoin deposits into high-yield vaults on Solana. Earn 5–12% APY via blue-chip DeFi protocols like Aave, Maker, and Ondo. Yields fund puzzle-secured wallets – solve riddles, images, and challenges to claim tiered prizes up to $5,000+. Form guilds for collaborative wins and forge real bonds. Vault 10? Community treasury for DAO-voted impact. Principal always safe – withdraw anytime."
-              className="max-w-4xl mx-auto"
-            />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy */}
+            <div className="space-y-8 animate-slide-in-up">
+              <h2 className="text-4xl md:text-5xl font-orbitron font-bold gradient-text">
+                What is CipherStakes?
+              </h2>
+              
+              <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+                <p>
+                  CipherStakes pools your <span className="text-primary font-semibold">$1 stablecoin deposits</span> into high-yield vaults on Solana. 
+                  Earn 5–12% APY via blue-chip DeFi protocols like Aave, Maker, and Ondo.
+                </p>
+                
+                <p>
+                  Yields fund puzzle-secured wallets – solve riddles, images, and challenges to claim tiered prizes up to <span className="text-accent font-bold">$5,000+</span>. 
+                  Form guilds for collaborative wins and forge real bonds.
+                </p>
+                
+                <p>
+                  Vault 10? That's our community treasury for DAO-voted impact. <span className="text-secondary font-semibold">Principal always safe</span> – withdraw anytime.
+                </p>
+              </div>
 
-            {/* Feature bullets */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 max-w-6xl mx-auto">
-              {features.map((feature, index) => (
-                <div 
-                  key={feature.title}
-                  className="glass-panel p-4 rounded-lg hover:neon-border-blue transition-all duration-300 group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <feature.icon className={`h-8 w-8 ${feature.color} mb-2 group-hover:animate-pulse-glow`} />
-                  <h3 className="font-orbitron font-bold text-foreground mb-1">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
-                </div>
-              ))}
+              {/* Feature bullets */}
+              <div className="grid sm:grid-cols-2 gap-4 pt-6">
+                {features.map((feature, index) => (
+                  <div 
+                    key={feature.title}
+                    className="glass-panel p-4 rounded-lg border border-transparent hover:border-primary transition-all duration-300 group"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <feature.icon className={`h-8 w-8 ${feature.color} mb-2`} />
+                    <h3 className="font-orbitron font-bold text-foreground mb-1">{feature.title}</h3>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+
+              <Button variant="neonPurple" size="lg">
+                Explore How It Works
+              </Button>
             </div>
-          </div>
 
-          {/* Timeline Section */}
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">
-              <span className="gradient-text">The Flow</span>
-            </h2>
-            <Timeline data={timelineData} />
+            {/* Right: Infographic */}
+            <div className="relative animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="glass-panel p-8 rounded-2xl space-y-6 border border-border">
+                <h3 className="text-2xl font-orbitron font-bold text-primary text-center mb-8">The Flow</h3>
+                
+                <div className="space-y-6">
+                  {[
+                    { step: "01", title: "Deposit", desc: "Pool stablecoins into vaults" },
+                    { step: "02", title: "Yield Staking", desc: "Earn 5-12% APY automatically" },
+                    { step: "03", title: "Puzzle Wallets", desc: "Solve challenges to claim prizes" },
+                    { step: "04", title: "Claim Rewards", desc: "Withdraw principal + prizes anytime" }
+                  ].map((item, index) => (
+                    <div key={item.step} className="flex items-start gap-4 group">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary bg-primary/10 flex items-center justify-center font-orbitron font-bold text-primary">
+                        {item.step}
+                      </div>
+                      <div className="flex-1 pt-2">
+                        <h4 className="font-orbitron font-bold text-foreground mb-1">{item.title}</h4>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                      {index < 3 && (
+                        <div className="absolute left-6 mt-12 w-0.5 h-6 bg-primary/30" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
