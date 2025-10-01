@@ -27,14 +27,20 @@ const UrgencySection = () => {
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker" />
       
+      {/* Animated vault icons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+        <div className="absolute top-10 right-10 text-6xl animate-float">🔒</div>
+        <div className="absolute bottom-20 left-20 text-6xl animate-float" style={{ animationDelay: '1s' }}>🔐</div>
+        <div className="absolute top-1/2 left-1/4 text-6xl animate-float" style={{ animationDelay: '2s' }}>🧩</div>
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           {/* Headline */}
           <div className="space-y-4 animate-slide-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full mb-4 border border-accent/30">
-              <Clock className="h-5 w-5 text-accent" />
-              <span className="text-sm font-semibold text-accent uppercase tracking-wider">Limited Time</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full mb-4">
+              <Clock className="h-5 w-5 neon-text-pink animate-pulse-glow" />
+              <span className="text-sm font-semibold neon-text-pink uppercase tracking-wider">Limited Time</span>
             </div>
             
             <h2 className="text-4xl md:text-6xl font-orbitron font-bold gradient-text">
@@ -45,13 +51,13 @@ const UrgencySection = () => {
           {/* Main copy */}
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto animate-slide-in-up" style={{ animationDelay: '0.1s' }}>
             <p>
-              Stablecoins are exploding – <span className="text-primary font-bold">trillions idle</span>, billions in dust. 
-              CipherStakes captures this with micro-entry vaults filling <span className="text-accent font-bold">fast</span>.
+              Stablecoins are exploding – <span className="neon-text-blue font-bold">trillions idle</span>, billions in dust. 
+              CipherStakes captures this with micro-entry vaults filling <span className="neon-text-pink font-bold">fast</span>.
             </p>
             
             <p>
               Early participants snag the biggest prizes before TVL skyrockets. In 2025's bull run, yields are peaking – 
-              <span className="text-secondary font-bold"> don't watch from the sidelines</span>.
+              <span className="neon-text-purple font-bold"> don't watch from the sidelines</span>.
             </p>
           </div>
 
@@ -60,10 +66,10 @@ const UrgencySection = () => {
             {reasons.map((reason, index) => (
               <div 
                 key={reason.title}
-                className="glass-panel p-6 rounded-xl border border-transparent hover:border-accent transition-all duration-300 group animate-slide-in-up"
+                className="glass-panel p-6 rounded-xl hover:neon-border-pink transition-all duration-300 group animate-slide-in-up"
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <reason.icon className={`h-12 w-12 ${reason.color} mx-auto mb-4`} />
+                <reason.icon className={`h-12 w-12 ${reason.color} mx-auto mb-4 group-hover:animate-pulse-glow`} />
                 <h3 className="text-xl font-orbitron font-bold text-foreground mb-2">{reason.title}</h3>
                 <p className="text-sm text-muted-foreground">{reason.description}</p>
               </div>
